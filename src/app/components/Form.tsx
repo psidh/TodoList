@@ -25,7 +25,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTask(e.target.value)}
         className="dark:bg-black dark:text-white py-3 pl-4 pr-28 rounded-lg border border-gray-300"
         />
-      <button type="submit" className="text-xl md:text-2xl mt-4 py-2 px-12  hover:bg-teal-600 bg-teal-500 text-white rounded-md">
+      <button type="submit" className="text-xl md:text-2xl mt-4 py-2 px-12  hover:bg-green-600 bg-green-500 text-white rounded-md">
         Add
       </button>
       </div>
