@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-page-custom-font */
-"use client";
-import Image from "next/image";
-import Navbar from "./components/navbar";
-import styled, { createGlobalStyle } from "styled-components";
-import Footer from "./components/footer";
-import TaskForm from "./components/Form";
-import TaskList from "./components/List";
-import { useEffect, useState } from "react";
-import Intro from "./components/Intro";
+'use client';
+import Image from 'next/image';
+import styled, { createGlobalStyle } from 'styled-components';
+import TaskForm from './components/Form';
+import TaskList from './components/List';
+import { useEffect, useState } from 'react';
+import Intro from './components/Intro';
 const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Ambit';
@@ -22,13 +20,13 @@ export default function Home() {
   useEffect(() => {
     // Load tasks from local storage on component mount
     const storedTasks =
-      JSON.parse(localStorage.getItem("tasks") || "null") || [];
+      JSON.parse(localStorage.getItem('tasks') || 'null') || [];
     setTasks(storedTasks);
   }, []);
 
   useEffect(() => {
     // Save tasks to local storage whenever tasks state changes
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
   const addTask = (taskName: string) => {
@@ -57,10 +55,9 @@ export default function Home() {
   };
 
   return (
-    <div style={{ fontFamily: "Ambit, sans-serif" }}>
+    <div style={{ fontFamily: 'Ambit, sans-serif' }}>
       <div className="flex flex-col font-Ambit bg-white dark:bg-black h-screen md:h-full">
         <GlobalStyle />
-        <Navbar />
         <Intro />
         <div className="flex-grow">
           <TaskForm addTask={addTask} />
@@ -71,7 +68,6 @@ export default function Home() {
             editTask={editTask}
           />
         </div>
-        <Footer />
       </div>
     </div>
   );

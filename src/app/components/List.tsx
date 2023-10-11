@@ -1,7 +1,7 @@
-// components/TaskList.js
+
 import React from 'react';
 import { useState } from 'react';
-// Define a type or interface for the props
+
 interface TaskListProps {
   tasks: {
     name: string;
@@ -35,7 +35,7 @@ const TaskList: React.FC<TaskListProps>  = ({ tasks, deleteTask, toggleComplete,
     {tasks.map((task, index) => (
       <li
         key={index}
-        className="dark:bg-black   bg-white p-4 border shadow-md rounded-lg hover:shadow-lg mx-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+        className="dark:bg-black bg-white p-4 border shadow-md rounded-lg hover:shadow-lg mx-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
       >
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
